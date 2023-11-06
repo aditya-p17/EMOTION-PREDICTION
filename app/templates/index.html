@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+
+
+h1 {
+    color: #fff;
+    font-size: 36px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.text-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.text-box textarea {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 5px;
+}
+header {
+    background-color: #3498db;
+    text-align: center;
+    padding: 20px;
+}
+
+.button {
+    background-color: #27ae60;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #219a52;
+}
+.predict_text{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+    </style>
+    <title>Prediction Model</title>
+</head>
+<body><header>
+    <h1>Predict the emotion</h1>
+</header>
+    <main>
+    <form action="{{ url_for('predict')}}" method="post">
+        <textarea
+        class="text-box" name="inputxt" id="inputxt" cols="80" rows="5" placeholder="Enter the text"></textarea><br>
+        <input 
+        class="button" type="submit" value="Predict">
+    </form>
+
+<br><br>
+  <div class="predict_text">{{ prediction_text }}</div>  
+</main>
+</body>
+</html>
