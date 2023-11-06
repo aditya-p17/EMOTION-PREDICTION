@@ -1,15 +1,20 @@
-Installation
+# EMOTION PREDICTION
+An NLP Application to predict emotions based upon text
+
+## Installation
 
 
 Use the package manager pip to install the required dependencies
 
-Windows:
-
+ ### Windows:
+```bash
 pip install -r requirements.txt 
+```
+### Usage
 
-Usage
 
-
-Windows:
+#### Windows:
+```bash
 cd app
 flask run
+```
