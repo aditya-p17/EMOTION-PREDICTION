@@ -11,4 +11,5 @@ Usage
 
 
 Windows:
-python app.py
+cd app
+flask run
